@@ -1,0 +1,3 @@
+[submodule "Assets/Libraries/Arduino"]
+	path = Assets/Libraries/Arduino
+	url = https://github.com/montblancpj/unity-arduino-modules
