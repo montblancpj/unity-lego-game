@@ -8,7 +8,7 @@ public class LedBlock : MonoBehaviour {
 	void Hit() 
 	{
 		if (isActive_) {
-			led_.SetLed(15, 4095);
+			led_.SetLed(true);
 			isActive_ = false;
 			StartCoroutine(SetLedOffAfter(0.2f));
 		}
@@ -17,7 +17,7 @@ public class LedBlock : MonoBehaviour {
 	private IEnumerator SetLedOffAfter(float time) 
 	{
 		yield return new WaitForSeconds(time);
-		led_.SetLed(15, 0);
+		led_.SetLed(false);
 		isActive_ = true;
 	}
 	

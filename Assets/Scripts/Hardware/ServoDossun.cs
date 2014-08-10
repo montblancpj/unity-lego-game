@@ -22,7 +22,7 @@ public class ServoDossun : MonoBehaviour {
 		float dy = len * 8.9f * 200;
 		if (dy > 0) {
 			Debug.Log(dy);
-			servo_.SetYPixel(dy);
+			// servo_.SetYPixel(dy);
 			preY_ = y;
 		}
 	}
