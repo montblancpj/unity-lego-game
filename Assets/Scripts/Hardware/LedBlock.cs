@@ -2,9 +2,13 @@
 using System.Collections;
 
 public class LedBlock : MonoBehaviour {
-	private LEDController led_ = LEDController.Instance;
+	private LEDController led_ = null;
 	private bool isActive_ = true;
-	
+
+	void Awake() {
+		led_ = LEDController.Instance;
+	}
+
 	void Hit() 
 	{
 		if (isActive_) {
@@ -19,10 +23,5 @@ public class LedBlock : MonoBehaviour {
 		yield return new WaitForSeconds(time);
 		led_.SetLed(false);
 		isActive_ = true;
-	}
-	
-	void OnApplicationQuit()
-	{
-		led_.Quit();
 	}
 }
