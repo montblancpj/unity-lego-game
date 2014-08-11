@@ -2,9 +2,13 @@
 using System.Collections;
 
 public class ServoDossun : MonoBehaviour {
-	private ServoController servo_ = ServoController.Instance;
+	private ServoController servo_ = null;
 	private Vector3 originalPosition_;
 	private float preY_;
+
+	void Awake() {
+		servo_ = ServoController.Instance;
+	}
 
 	void Start()
 	{
@@ -25,10 +29,5 @@ public class ServoDossun : MonoBehaviour {
 			// servo_.SetYPixel(dy);
 			preY_ = y;
 		}
-	}
-
-	void OnApplicationQuit()
-	{
-		servo_.Quit();
 	}
 }
