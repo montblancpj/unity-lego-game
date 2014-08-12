@@ -1,0 +1,7 @@
+{
+    "title": "Arduino Settings",
+    "serial": {
+      "name": "/dev/tty.usbmodemfa131",
+      "baudrate": 9600,
+    }
+}
