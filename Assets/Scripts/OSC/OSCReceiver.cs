@@ -35,17 +35,18 @@ public class OSCReceiver : MonoBehaviour
 				var msg = new Dictionary<string, int>();
 				switch (item.Value.packets[i].Address) {
 					case "/LegoAnalyzer/AddBlock":
-						msg["x"] = (int)item.Value.packets[i].Data[0];
-						msg["y"] = (int)item.Value.packets[i].Data[1];
+						msg["x"] = int.Parse(item.Value.packets[i].Data[0].ToString());
+						msg["y"] = int.Parse(item.Value.packets[i].Data[1].ToString());
 						controller_.SendMessage("addBlock", msg);
 						break;
 					case "/LegoAnalyzer/DeleteBlock":
-						msg["x"] = (int)item.Value.packets[i].Data[0];
-						msg["y"] = (int)item.Value.packets[i].Data[1];
+					Debug.Log (item.Value.packets[i].Data[0]);
+						msg["x"] = int.Parse(item.Value.packets[i].Data[0].ToString());
+						msg["y"] = int.Parse(item.Value.packets[i].Data[1].ToString());
 						controller_.SendMessage("deleteBlock", msg);
 						break;
 					case "/LegoAnalyzer/ChangeBlock":
-						msg["kind"] = (int)item.Value.packets[i].Data[0];
+						msg["kind"] = int.Parse(item.Value.packets[i].Data[0].ToString());
 						controller_.SendMessage("changeBlock", msg);
 						break;
 					default:
