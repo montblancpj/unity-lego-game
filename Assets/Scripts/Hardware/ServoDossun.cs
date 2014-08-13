@@ -25,7 +25,7 @@ public class ServoDossun : MonoBehaviour {
 		float len = Mathf.Sqrt(moveLength - (originalPosition_.y - y)) / moveLength;
 		float dy = len * 8.9f * 200;
 		if (dy > 0) {
-			Debug.Log(dy);
+			// Debug.Log(dy);
 			// servo_.SetYPixel(dy);
 			preY_ = y;
 		}
