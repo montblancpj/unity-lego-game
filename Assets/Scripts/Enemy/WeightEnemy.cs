@@ -10,6 +10,7 @@ public class WeightEnemy : Enemy
 	public float RisingSpeed = 10.0f;
 	public float WaitTime = 1.0f;
 	public GameObject effect;
+	public KeyCode fallKey = KeyCode.Alpha1;
 	
 	enum State {
 		WAITING,
@@ -27,27 +28,51 @@ public class WeightEnemy : Enemy
 	
 	void Update() 
 	{
-		++cnt_;
+		if ( Input.GetKeyDown(fallKey) ) {
+			Fall();
+		}
+
 		switch (state_) {
 			case State.WAITING:
-				foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
-					Vector3 diff = player.transform.position - transform.position;
-					if (diff.y < 0.0f && Mathf.Abs(diff.x) < ReactionDistance) {
-						rigidbody.isKinematic = false;
-						rigidbody.useGravity  = true;
-						state_ = State.FALLING;
-						return;
-					}
-				}
+				Waiting();
 				break;
 			case State.FALLING:
+				// nothing to do
 				break;
 			case State.RISING:
-				transform.localPosition += transform.up * RisingSpeed * Time.deltaTime;
-				if (transform.localPosition.y >= originalPosition_.y) {
-					state_ = State.WAITING;
-				}
+				Rising();
 				break;
+		}
+		++cnt_;
+	}
+
+
+	void Waiting()
+	{
+		foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
+			Vector3 diff = player.transform.position - transform.position;
+			if (diff.y < 0.0f && Mathf.Abs(diff.x) < ReactionDistance) {
+				Fall();
+			}
+		}
+	}
+
+
+	[ContextMenu("Fall")]
+	void Fall()
+	{
+		rigidbody.isKinematic = false;
+		rigidbody.useGravity  = true;
+		state_ = State.FALLING;
+		return;
+	}
+
+
+	void Rising()
+	{
+		transform.localPosition += transform.up * RisingSpeed * Time.deltaTime;
+		if (transform.localPosition.y >= originalPosition_.y) {
+			state_ = State.WAITING;
 		}
 	}
 	
