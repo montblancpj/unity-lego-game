@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eae0d139b42a4c7183ad390f342e3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerName: Mario
+  PlayerName: Robot
   IdleTexture: {fileID: 2800000, guid: cf61f2e6ae6fa4327a7f7c0cd4a2bfb4, type: 3}
   WalkTextures:
   - {fileID: 0}

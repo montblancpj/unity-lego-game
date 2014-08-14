@@ -60,7 +60,7 @@ public class DynamicObjectController : MonoBehaviour
 
 		RaycastHit hit;
 		if (Physics.Raycast(from, to, out hit, 1.0f)) {
-			Debug.LogError("Some object already exists at (" + from.x + ", " + from.y + ")");
+			Debug.LogWarning("An object already exists at (" + from.x + ", " + from.y + ")");
 			return false;
 		} else {
 			Debug.Log("add block at (" + from.x + ", " + from.y + ")");
@@ -103,7 +103,7 @@ public class DynamicObjectController : MonoBehaviour
 			}
 		}
 		if (!deleted) {
-			Debug.LogError("No object exists at (" + from.x + ", " + from.y + ")");
+			Debug.LogWarning("No object exists at (" + from.x + ", " + from.y + ")");
 			return false;
 		}
 		Sound.Play("Explosion");
