@@ -7,7 +7,7 @@ public class WeightEnemy : Enemy
 	private Vector3 originalPosition_;
 	
 	public float ReactionDistance = 2.5f;
-	public float RisingSpeed = 10.0f;
+	public float RisingSpeed = 200.0f;
 	public float WaitTime = 1.0f;
 	public GameObject effect;
 	public KeyCode fallKey = KeyCode.Alpha1;
@@ -15,6 +15,7 @@ public class WeightEnemy : Enemy
 	enum State {
 		WAITING,
 		FALLING,
+		GROUND,
 		RISING
 	};
 	private State state_ = State.WAITING;
@@ -37,6 +38,9 @@ public class WeightEnemy : Enemy
 				Waiting();
 				break;
 			case State.FALLING:
+				Fall();
+				break;
+			case State.GROUND:
 				// nothing to do
 				break;
 			case State.RISING:
@@ -66,7 +70,14 @@ public class WeightEnemy : Enemy
 		state_ = State.FALLING;
 		return;
 	}
-
+	
+	
+	void Fall2()
+	{
+		rigidbody.isKinematic = false;
+		transform.localPosition -= transform.up * RisingSpeed * Time.deltaTime;
+		state_ = State.FALLING;
+	}
 
 	void Rising()
 	{
@@ -88,6 +99,7 @@ public class WeightEnemy : Enemy
 		if (collision.transform.tag == "Player") {
 			collision.transform.SendMessage("Dead");
 		} else if (state_ == State.FALLING && collision.contacts[0].normal.y > 0) {
+			state_ = State.GROUND;
 			if (effect) {
 				var obj = Instantiate(effect, transform.position + Vector3.down, Quaternion.identity);
 				StartCoroutine(WaitThenCallback(2.0f, () => {

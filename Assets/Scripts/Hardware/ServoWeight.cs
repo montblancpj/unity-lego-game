@@ -5,8 +5,11 @@ public class ServoWeight : MonoBehaviour {
 	private ServoController servo_ = null;
 	private Vector3 originalPosition_;
 	private float preY_;
+	private float moveLengthY = 0f;
 
 	void Awake() {
+        // WeightEnemyの移動可能距離
+		moveLengthY = transform.localPosition.y + 7.51997f;
 		servo_ = ServoController.Instance;
 	}
 
@@ -17,17 +20,6 @@ public class ServoWeight : MonoBehaviour {
 
 	void Update()
 	{
-		float moveLength = 4.9f;
-		float y = transform.localPosition.y;
-		if (y - preY_ > 0.0f) {
-			moveLength = 5.0f;
-		}
-		float len = Mathf.Sqrt(moveLength - (originalPosition_.y - y)) / moveLength;
-		float dy = len * 8.9f * 200;
-		if (dy > 0) {
-			// Debug.Log(dy);
-			// servo_.SetYPixel(dy);
-			preY_ = y;
-		}
+		servo_.SetY((originalPosition_.y -  transform.localPosition.y) / moveLengthY);
 	}
 }
