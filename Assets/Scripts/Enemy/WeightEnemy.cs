@@ -95,6 +95,7 @@ public class WeightEnemy : Enemy
 				}));
 			}
 
+			SoundController.Instance.Play("Weight");
 			StartCoroutine(WaitThenCallback(WaitTime, () => {
 				rigidbody.isKinematic = true;
 				rigidbody.useGravity  = false;

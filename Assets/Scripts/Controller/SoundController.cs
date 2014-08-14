@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class SoundController : MonoBehaviour 
 {
+	public static SoundController Instance;
 	private Dictionary<string, AudioClip> sounds_ = new Dictionary<string, AudioClip>();
 
 	void Awake() 
 	{
+		Instance = this;
 		Load("Coin",      "Sound/coin");
 		Load("Jump",      "Sound/jump");
 		Load("Jump2",     "Sound/jump2");
