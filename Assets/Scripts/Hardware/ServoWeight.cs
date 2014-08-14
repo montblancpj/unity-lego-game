@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ServoDossun : MonoBehaviour {
+public class ServoWeight : MonoBehaviour {
 	private ServoController servo_ = null;
 	private Vector3 originalPosition_;
 	private float preY_;

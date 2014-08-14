@@ -1,7 +1,7 @@
 {
     "title": "Arduino Settings",
     "serial": {
-      "name": "/dev/tty.usbmodemfa131",
-      "baudrate": 9600,
+      "name": "/dev/tty.usbmodem14141",
+      "baudrate": 9600
     }
 }
