@@ -18,6 +18,7 @@ public class SoundController : MonoBehaviour
 		Load("Pipe",      "Sound/pipe");
 		Load("Weight",    "Sound/weight");
 		Load("Block",     "Sound/block");
+		Load("Goal",      "Sound/goal");
 	}
 	
 	public void Load(string key, string path) 
@@ -37,7 +38,7 @@ public class SoundController : MonoBehaviour
 		Vector3 playerPosition = GameObject.FindWithTag("Player").transform.position;
 		AudioSource.PlayClipAtPoint(sounds_[key], playerPosition);
 	}
-	
+
 	public void Stop(string key)
 	{
 		if ( !IsExists(key) ) return;
@@ -45,7 +46,7 @@ public class SoundController : MonoBehaviour
 		Vector3 playerPosition = GameObject.FindWithTag("Player").transform.position;
 		AudioSource.PlayClipAtPoint(sounds_[key], playerPosition);
 	}
-	
+
 	bool IsExists(string key)
 	{
 		if (!sounds_.ContainsKey(key)) {

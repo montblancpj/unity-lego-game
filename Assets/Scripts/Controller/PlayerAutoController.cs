@@ -382,7 +382,7 @@ public class PlayerAutoController : MonoBehaviour
 			case "Goal":
 				if (state_ != State.GOAL) {
 					transform.SendMessage("StartAnimation");
-					Sound.Play("1up");
+					Sound.Play("Goal");
 					state_ = State.GOAL;
 				}
 				return true;
