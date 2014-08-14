@@ -15,6 +15,7 @@ public class SoundController : MonoBehaviour
 		Load("Explosion", "Sound/explosion");
 		Load("Pipe",      "Sound/pipe");
 		Load("Weight",    "Sound/weight");
+		Load("Block",     "Sound/block");
 	}
 	
 	public void Load(string key, string path) 

@@ -15774,6 +15774,7 @@ MonoBehaviour:
   RisingSpeed: 1.5
   WaitTime: 1
   effect: {fileID: 100000, guid: a183892da706c449ca530ae8403eea24, type: 2}
+  fallKey: 49
 --- !u!65 &2073757952
 BoxCollider:
   m_ObjectHideFlags: 0
