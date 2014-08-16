@@ -5,21 +5,27 @@ using System.Collections;
 public class WeightEnemy : Enemy 
 {
 	private Vector3 originalPosition_;
-	
+
 	public float ReactionDistance = 2.5f;
 	public float RisingSpeed = 200.0f;
 	public float WaitTime = 1.0f;
 	public GameObject effect;
 	public KeyCode fallKey = KeyCode.Alpha1;
 	
-	enum State {
+	public enum State {
 		WAITING,
 		FALLING,
 		GROUND,
 		RISING
 	};
-	private State state_ = State.WAITING;
 
+	public State CurrentState {
+		get {
+			return state_;
+		}
+	}
+
+	private State state_ = State.WAITING;
 
 	void Start() 
 	{
@@ -71,14 +77,6 @@ public class WeightEnemy : Enemy
 		return;
 	}
 	
-	
-	void Fall2()
-	{
-		rigidbody.isKinematic = false;
-		transform.localPosition -= transform.up * RisingSpeed * Time.deltaTime;
-		state_ = State.FALLING;
-	}
-
 	void Rising()
 	{
 		transform.localPosition += transform.up * RisingSpeed * Time.deltaTime;
