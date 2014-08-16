@@ -5,19 +5,26 @@ using System.Collections.Generic;
 
 public class DynamicObjectController : MonoBehaviour
 {
+	[Serializable]
+	public struct SpecialBlocks {
+		public int x, y;
+		public GameObject specialObject;
+	}
+
 	public Vector3 origin = Vector3.zero;
 	public float scale = 1.0f;
 	public GameObject effect;
 	public List<string> addables;
 	public List<GameObject> targetsUpperGround;
 	public List<GameObject> targetsUnderGround;
+	public List<SpecialBlocks> specialTargetMap;
 	public int kind;
 	public int underGroundThreashold = 0;
 	
 	// Sound
 	private SoundController Sound;
-	
-	
+
+
 	void Start() 
 	{
 		Sound = GameObject.FindWithTag("SoundController").GetComponent<SoundController>();
@@ -42,8 +49,13 @@ public class DynamicObjectController : MonoBehaviour
 	}
 	
 
-	GameObject getTarget(Vector3 position)
+	GameObject getTarget(Vector3 position, int x, int y)
 	{
+		foreach (var rule in specialTargetMap) {
+			if (x == rule.x && y == rule.y) {
+				return rule.specialObject;
+			}
+		}
 		if (position.y >= underGroundThreashold) {
 			return targetsUpperGround[kind];
 		} else {
@@ -70,7 +82,7 @@ public class DynamicObjectController : MonoBehaviour
 				if (obj != null) Destroy(obj);
 			}));
 			StartCoroutine(waitThenInvoke(1.0f, () => {
-				Instantiate(getTarget(position), position, Quaternion.identity);
+				Instantiate(getTarget(position, x, y), position, Quaternion.identity);
 			}));
 			Sound.Play("Explosion");
 		}

@@ -15699,6 +15699,10 @@ MonoBehaviour:
   - {fileID: 100000, guid: 9d8b3704bda4643d8912cc5fe7492716, type: 2}
   - {fileID: 100000, guid: c6691e6e575f94f0dbacd97fb0b62753, type: 2}
   - {fileID: 100000, guid: 79e53ad9fd3dc4c5b8dd60aef03b004a, type: 2}
+  specialTargetMap:
+  - x: 18
+    y: 4
+    specialObject: {fileID: 100000, guid: 0fb3b93a286f943dd878ed539513d82c, type: 2}
   kind: 0
   underGroundThreashold: 1
 --- !u!1001 &2070136744
