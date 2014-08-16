@@ -4,7 +4,7 @@ using System.Collections;
 public class CoinBlock : MonoBehaviour {
 
 	private Vector3 originalPosition_;
-	private bool isHit_ = false;
+	//private bool isHit_ = false;
 	private bool isBounce_ = false;
 	private int cnt_ = 0;
 	
