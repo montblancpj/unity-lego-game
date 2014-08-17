@@ -101,7 +101,7 @@ public class DynamicObjectController : MonoBehaviour
 			StartCoroutine(waitThenInvoke(2.0f, () => {
 				if (obj != null) Destroy(obj);
 			}));
-			StartCoroutine(waitThenInvoke(1.0f, () => {
+			StartCoroutine(waitThenInvoke(0.2f, () => {
 				Instantiate(getTarget(position, x, y, forceKind), position, Quaternion.identity);
 			}));
 			Sound.Play("Explosion");
@@ -126,7 +126,7 @@ public class DynamicObjectController : MonoBehaviour
 					StartCoroutine(waitThenInvoke(2.0f, () => {
 						Destroy(obj);
 					}));
-					StartCoroutine(waitThenInvoke(1.0f, () => {
+					StartCoroutine(waitThenInvoke(0.3f, () => {
 						Destroy(hit.transform.gameObject);
 					}));
 					deleted = true;
