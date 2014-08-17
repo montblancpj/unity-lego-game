@@ -34,15 +34,24 @@ public class DynamicObjectController : MonoBehaviour
 	
 	void Update() 
 	{
-		if ( Input.GetMouseButtonDown(0) ) {
+		if ( Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) ) {
 			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 			if ( Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << stage.layer) ) {
 				var position = new Dictionary<string, int>();
 				position["x"] = (int)Mathf.Floor((1.0f - hit.textureCoord.x) * stage.transform.localScale.x);
 				position["y"] = (int)Mathf.Floor((hit.textureCoord.y) * stage.transform.localScale.y);
-				if (!addBlock(position)) {
-					deleteBlock(position);
+				if ( Input.GetMouseButtonDown(1) ) {
+					var originalKind = kind;
+					kind = 2;
+					if (!addBlock(position)) {
+						deleteBlock(position);
+						kind = originalKind;
+					}
+				} else {
+					if (!addBlock(position)) {
+						deleteBlock(position);
+					}
 				}
 			}
 		}
