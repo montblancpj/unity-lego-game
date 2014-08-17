@@ -11,6 +11,7 @@ public class DynamicObjectController : MonoBehaviour
 		public GameObject specialObject;
 	}
 
+	public GameObject stage;
 	public Vector3 origin = Vector3.zero;
 	public float scale = 1.0f;
 	public GameObject effect;
@@ -33,12 +34,24 @@ public class DynamicObjectController : MonoBehaviour
 	
 	void Update() 
 	{
+		if ( Input.GetMouseButtonDown(0) ) {
+			var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if ( Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << stage.layer) ) {
+				var position = new Dictionary<string, int>();
+				position["x"] = (int)Mathf.Floor((1.0f - hit.textureCoord.x) * stage.transform.localScale.x);
+				position["y"] = (int)Mathf.Floor((hit.textureCoord.y) * stage.transform.localScale.y);
+				if (!addBlock(position)) {
+					deleteBlock(position);
+				}
+			}
+		}
+
+		/*
 		if (Input.GetMouseButtonDown(0)) {
 			Vector3 screenPosition = Input.mousePosition;
 			screenPosition.z = 0.0f;
-			Debug.Log (screenPosition);
 			Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-			Debug.Log (worldPosition);
 			var position = new Dictionary<string, int>();
 			position["x"] = (int)Mathf.Floor( worldPosition.x + 0.5f - origin.x);
 			position["y"] = (int)Mathf.Floor(-worldPosition.y + 0.5f + origin.y);
@@ -46,6 +59,7 @@ public class DynamicObjectController : MonoBehaviour
 				deleteBlock(position);
 			}
 		}
+		*/
 	}
 	
 

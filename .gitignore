@@ -19,3 +19,6 @@ sysinfo.txt
 
 # Mac
 .DS_Store
+
+# Others
+*.un~
