@@ -42,12 +42,9 @@ public class DynamicObjectController : MonoBehaviour
 				position["x"] = (int)Mathf.Floor((1.0f - hit.textureCoord.x) * stage.transform.localScale.x);
 				position["y"] = (int)Mathf.Floor((hit.textureCoord.y) * stage.transform.localScale.y);
 				if ( Input.GetMouseButtonDown(1) ) {
-					var originalKind = kind;
-					kind = 2;
-					if (!addBlock(position)) {
+					if (!addBlock(position, 2)) {
 						deleteBlock(position);
 					}
-					kind = originalKind;
 				} else {
 					if (!addBlock(position)) {
 						deleteBlock(position);
@@ -72,7 +69,7 @@ public class DynamicObjectController : MonoBehaviour
 	}
 	
 
-	GameObject getTarget(Vector3 position, int x, int y)
+	GameObject getTarget(Vector3 position, int x, int y, int forceKind = -1)
 	{
 		foreach (var rule in specialTargetMap) {
 			if (x == rule.x && y == rule.y) {
@@ -80,14 +77,14 @@ public class DynamicObjectController : MonoBehaviour
 			}
 		}
 		if (position.y >= underGroundThreashold) {
-			return targetsUpperGround[kind];
+			return targetsUpperGround[forceKind != -1 ? forceKind : kind];
 		} else {
-			return targetsUnderGround[kind];
+			return targetsUnderGround[forceKind != -1 ? forceKind : kind];
 		}
 	}
 
 
-	bool addBlock(Dictionary<string, int> msg)
+	bool addBlock(Dictionary<string, int> msg, int forceKind = -1)
 	{
 		int x = msg["x"], y = msg["y"];
 		Vector3 from = origin + new Vector3(x * scale, -y * scale, -1.0f);
@@ -105,7 +102,7 @@ public class DynamicObjectController : MonoBehaviour
 				if (obj != null) Destroy(obj);
 			}));
 			StartCoroutine(waitThenInvoke(1.0f, () => {
-				Instantiate(getTarget(position, x, y), position, Quaternion.identity);
+				Instantiate(getTarget(position, x, y, forceKind), position, Quaternion.identity);
 			}));
 			Sound.Play("Explosion");
 		}
