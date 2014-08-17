@@ -46,8 +46,8 @@ public class DynamicObjectController : MonoBehaviour
 					kind = 2;
 					if (!addBlock(position)) {
 						deleteBlock(position);
-						kind = originalKind;
 					}
+					kind = originalKind;
 				} else {
 					if (!addBlock(position)) {
 						deleteBlock(position);
