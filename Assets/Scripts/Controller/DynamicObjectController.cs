@@ -23,7 +23,7 @@ public class DynamicObjectController : MonoBehaviour
 	public int underGroundThreashold = 0;
 	public float addDelay    = 0.2f;
 	public float deleteDelay = 0.3f;
-	
+
 	// Sound
 	private SoundController Sound;
 

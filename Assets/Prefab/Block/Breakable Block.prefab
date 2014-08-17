@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Breakable Block
   m_TagString: Hittable
   m_Icon: {fileID: 0}
