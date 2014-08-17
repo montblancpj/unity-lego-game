@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Coin Block
   m_TagString: Hittable
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.13230133, y: 4.21321106, z: .0988769531}
+  m_LocalPosition: {x: 6.13230133, y: 4.21321106, z: .0988769531}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +98,18 @@ MonoBehaviour:
   BounceLength: .200000003
   Cycle: 18
   BlockCoin: {fileID: 100000, guid: 91bfd051f10564099ab9ee55d30006b3, type: 2}
-  After: {fileID: 2100000, guid: 4453744665aa747a790e85f4739d73b1, type: 2}
+  After: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb713fa8e9d64706a772a35a67ab4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
