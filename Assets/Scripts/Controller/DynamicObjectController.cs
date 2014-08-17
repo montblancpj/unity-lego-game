@@ -21,6 +21,8 @@ public class DynamicObjectController : MonoBehaviour
 	public List<SpecialBlocks> specialTargetMap;
 	public int kind;
 	public int underGroundThreashold = 0;
+	public float addDelay    = 0.2f;
+	public float deleteDelay = 0.3f;
 	
 	// Sound
 	private SoundController Sound;
@@ -101,7 +103,7 @@ public class DynamicObjectController : MonoBehaviour
 			StartCoroutine(waitThenInvoke(2.0f, () => {
 				if (obj != null) Destroy(obj);
 			}));
-			StartCoroutine(waitThenInvoke(0.2f, () => {
+			StartCoroutine(waitThenInvoke(addDelay, () => {
 				Instantiate(getTarget(position, x, y, forceKind), position, Quaternion.identity);
 			}));
 			Sound.Play("Explosion");
@@ -126,7 +128,7 @@ public class DynamicObjectController : MonoBehaviour
 					StartCoroutine(waitThenInvoke(2.0f, () => {
 						Destroy(obj);
 					}));
-					StartCoroutine(waitThenInvoke(0.3f, () => {
+					StartCoroutine(waitThenInvoke(deleteDelay, () => {
 						Destroy(hit.transform.gameObject);
 					}));
 					deleted = true;
