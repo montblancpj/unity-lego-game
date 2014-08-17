@@ -1113,6 +1113,10 @@ Prefab:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
   m_RootGameObject: {fileID: 410553408}
@@ -1821,7 +1825,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 268712627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2142070340}
@@ -2732,6 +2736,7 @@ GameObject:
   - 4: {fileID: 380603094}
   - 108: {fileID: 380603096}
   - 114: {fileID: 380603095}
+  - 114: {fileID: 380603097}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -2801,6 +2806,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &380603097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380603093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1 &384117182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +2900,7 @@ GameObject:
   - 4: {fileID: 394856840}
   - 108: {fileID: 394856842}
   - 114: {fileID: 394856841}
+  - 114: {fileID: 394856843}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -2952,6 +2970,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &394856843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394856839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1 &399659048
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,6 +3195,7 @@ GameObject:
   - 4: {fileID: 410553411}
   - 108: {fileID: 410553410}
   - 114: {fileID: 410553409}
+  - 114: {fileID: 410553412}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -3234,6 +3265,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1179816946}
   m_RootOrder: 16
+--- !u!114 &410553412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410553408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &414985443
 Prefab:
   m_ObjectHideFlags: 0
@@ -3521,6 +3564,10 @@ Prefab:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
   m_RootGameObject: {fileID: 696556613}
@@ -3608,6 +3655,7 @@ GameObject:
   - 4: {fileID: 453304588}
   - 108: {fileID: 453304590}
   - 114: {fileID: 453304589}
+  - 114: {fileID: 453304591}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -3677,6 +3725,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &453304591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453304587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &457918539
 Prefab:
   m_ObjectHideFlags: 0
@@ -4521,6 +4581,10 @@ Prefab:
       propertyPath: m_Range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
   m_RootGameObject: {fileID: 394856839}
@@ -5279,6 +5343,7 @@ GameObject:
   - 4: {fileID: 668290673}
   - 108: {fileID: 668290675}
   - 114: {fileID: 668290674}
+  - 114: {fileID: 668290676}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -5348,6 +5413,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &668290676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668290672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &669371581
 Prefab:
   m_ObjectHideFlags: 0
@@ -5744,6 +5821,7 @@ GameObject:
   - 4: {fileID: 696556614}
   - 108: {fileID: 696556616}
   - 114: {fileID: 696556615}
+  - 114: {fileID: 696556617}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -5813,6 +5891,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &696556617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696556613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &699001425
 Prefab:
   m_ObjectHideFlags: 0
@@ -6220,6 +6310,7 @@ GameObject:
   - 4: {fileID: 733591875}
   - 108: {fileID: 733591877}
   - 114: {fileID: 733591876}
+  - 114: {fileID: 733591878}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -6289,6 +6380,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &733591878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 733591874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &749867700
 Prefab:
   m_ObjectHideFlags: 0
@@ -6581,6 +6684,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
       propertyPath: m_Range
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
@@ -8010,6 +8117,10 @@ Prefab:
       propertyPath: m_Range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
   m_RootGameObject: {fileID: 1162071073}
@@ -8890,6 +9001,7 @@ GameObject:
   - 4: {fileID: 1060665574}
   - 108: {fileID: 1060665573}
   - 114: {fileID: 1060665572}
+  - 114: {fileID: 1060665575}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -8959,6 +9071,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1179816946}
   m_RootOrder: 9
+--- !u!114 &1060665575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1060665571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &1061924759
 Prefab:
   m_ObjectHideFlags: 0
@@ -9779,6 +9903,7 @@ GameObject:
   - 4: {fileID: 1152409323}
   - 108: {fileID: 1152409325}
   - 114: {fileID: 1152409324}
+  - 114: {fileID: 1152409326}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -9848,6 +9973,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1152409326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152409322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &1153150646
 Prefab:
   m_ObjectHideFlags: 0
@@ -9902,6 +10039,7 @@ GameObject:
   - 4: {fileID: 1162071076}
   - 108: {fileID: 1162071075}
   - 114: {fileID: 1162071074}
+  - 114: {fileID: 1162071077}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -9971,6 +10109,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1179816946}
   m_RootOrder: 5
+--- !u!114 &1162071077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162071073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1 &1163205379
 GameObject:
   m_ObjectHideFlags: 0
@@ -10854,6 +11004,10 @@ Prefab:
       propertyPath: m_Range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
   m_RootGameObject: {fileID: 453304587}
@@ -11307,8 +11461,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373310067}
   m_LocalRotation: {x: 0, y: .707106829, z: -.707106829, w: 0}
-  m_LocalPosition: {x: -0, y: 5.5, z: -4.76837158e-07}
-  m_LocalScale: {x: .100000001, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 8.5, z: -4.76837158e-07}
+  m_LocalScale: {x: .100000001, y: 1, z: .400000006}
   m_Children: []
   m_Father: {fileID: 2142070340}
   m_RootOrder: 3
@@ -11813,6 +11967,10 @@ Prefab:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
   m_RootGameObject: {fileID: 2021132341}
@@ -11861,6 +12019,10 @@ Prefab:
       propertyPath: m_Range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
   m_RootGameObject: {fileID: 1933505254}
@@ -11908,6 +12070,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
       propertyPath: m_Range
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
@@ -12889,6 +13055,10 @@ Prefab:
       propertyPath: m_Range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938b0a707a8c442939b44ac304f185f0, type: 2}
   m_RootGameObject: {fileID: 1060665571}
@@ -13020,6 +13190,7 @@ GameObject:
   - 4: {fileID: 1597453112}
   - 108: {fileID: 1597453111}
   - 114: {fileID: 1597453110}
+  - 114: {fileID: 1597453113}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -13089,6 +13260,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1179816946}
   m_RootOrder: 15
+--- !u!114 &1597453113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597453109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &1637693763
 Prefab:
   m_ObjectHideFlags: 0
@@ -13664,6 +13847,7 @@ GameObject:
   - 4: {fileID: 1710363118}
   - 108: {fileID: 1710363120}
   - 114: {fileID: 1710363119}
+  - 114: {fileID: 1710363121}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -13733,6 +13917,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &1710363121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710363117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1001 &1713585946
 Prefab:
   m_ObjectHideFlags: 0
@@ -13831,6 +14027,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
       propertyPath: m_DrawHalo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
@@ -13948,6 +14148,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
       propertyPath: m_DrawHalo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
@@ -14550,6 +14754,10 @@ Prefab:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
   m_RootGameObject: {fileID: 733591874}
@@ -15003,6 +15211,7 @@ GameObject:
   - 4: {fileID: 1933505256}
   - 108: {fileID: 1933505255}
   - 114: {fileID: 1933505257}
+  - 114: {fileID: 1933505258}
   m_Layer: 0
   m_Name: PinkLight
   m_TagString: Untagged
@@ -15072,6 +15281,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: .800000012
   frequency: 150
+--- !u!114 &1933505258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933505254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1 &1937664266
 GameObject:
   m_ObjectHideFlags: 0
@@ -15925,6 +16146,7 @@ GameObject:
   - 4: {fileID: 2021132344}
   - 108: {fileID: 2021132343}
   - 114: {fileID: 2021132342}
+  - 114: {fileID: 2021132345}
   m_Layer: 0
   m_Name: YellowLight
   m_TagString: Untagged
@@ -15994,6 +16216,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1179816946}
   m_RootOrder: 11
+--- !u!114 &2021132345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2021132341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038be9cbbca38480882d5b0529276c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onOffKey: 108
 --- !u!1 &2031596569
 GameObject:
   m_ObjectHideFlags: 0
@@ -16442,6 +16676,10 @@ Prefab:
     - target: {fileID: 10800000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
       propertyPath: m_DrawHalo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 648a2de068c1248229f7e0da45f52eb9, type: 2}
