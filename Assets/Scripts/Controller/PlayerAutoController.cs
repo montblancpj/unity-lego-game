@@ -58,6 +58,7 @@ public class PlayerAutoController : MonoBehaviour
 	enum State {
 		NORMAL,
 		DEAD,
+		TRAMPED_DEAD,
 		ENTER_PIPE,
 		EXIT_PIPE,
 		GOAL
@@ -129,6 +130,9 @@ public class PlayerAutoController : MonoBehaviour
 				break;
 			case State.DEAD:
 				DeadAnimation();
+				break;
+			case State.TRAMPED_DEAD:
+				TrampedDeadAnimation();
 				break;
 		}
 
@@ -333,6 +337,25 @@ public class PlayerAutoController : MonoBehaviour
 	}
 
 
+	void TrampedDeadAnimation()
+	{
+		/* 
+		TODO: IMPLEMENT
+		int num = (cnt_ / DeadAnimationFrameLength) % DeadTextures.Length;
+		player_.renderer.material.mainTexture = DeadTextures[num];
+
+		transform.localPosition += Vector3.up * ( 10.0f -(0.3f * cnt_) ) * Time.deltaTime;
+
+		const float zPositionOffset = 2.0f;
+		if (cnt_ == 1) {
+			transform.localPosition -= zPositionOffset * Vector3.forward;
+		} else if (cnt_ >= 180) {
+			Destroy(gameObject);
+		}
+		*/
+	}
+
+
 	void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 		CollisionImpl(hit.transform);
@@ -420,6 +443,14 @@ public class PlayerAutoController : MonoBehaviour
 		controller_.enabled = false;
 		cnt_ = 0;
 		state_ = State.DEAD;
+	}
+
+
+	void TrampedDead()
+	{
+		controller_.enabled = false;
+		cnt_ = 0;
+		state_ = State.TRAMPED_DEAD;
 	}
 
 
